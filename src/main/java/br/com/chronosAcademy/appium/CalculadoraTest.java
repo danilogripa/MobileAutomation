@@ -20,9 +20,7 @@ public class CalculadoraTest {
     }
 
     @AfterEach
-    public void TearDown(){
-        driverFactory.getDriver().quit();
-    }
+    public void TearDown(){ driverFactory.getDriver().quit(); }
 
     @Test
     public void validarMultiplicacao() {
@@ -55,8 +53,5 @@ public class CalculadoraTest {
         driverFactory.getDriver().findElement(MobileBy.id(id)).click();
     }
 
-    public String getText(String id){
-
-        return driverFactory.getDriver().findElement(MobileBy.id(id)).getText();
-    }
+    public String getText(String id){ return driverFactory.getDriver().findElement(MobileBy.id(id)).getText(); }
 }
